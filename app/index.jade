@@ -109,8 +109,11 @@ block content
         p Upon receiving your request, we will email you to schedule an interview. Interviewing each potential team member ensures that we continue toward our purpose: 
         p
           strong To create a global community of digital workers collaborating to solve the refugee crisis&mdash;one small problem at a time.
-          
-        form.l-join-form(action='https://docs.google.com/forms/d/1w-8-OnbACv5M7c4KEHJtjXnDGwiPj_vnf7Lw9ereVow/formResponse', method='POST')
+
+        script.
+          var submitted=false;
+        iframe(name='hidden_iframe', id='hidden_iframe', style='display:none')
+        form.l-join-form(action='https://docs.google.com/forms/d/1w-8-OnbACv5M7c4KEHJtjXnDGwiPj_vnf7Lw9ereVow/formResponse', method='POST', target='hidden_iframe', onsubmit='submitted=true;')
           label(for='your-name') name
           input#your-name(type='text', required='', name='entry.372718999', placeholder='Jane Smith', autocomplete='name')
           label(for='your-email') email
