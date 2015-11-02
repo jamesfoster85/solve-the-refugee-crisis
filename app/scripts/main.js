@@ -42,34 +42,34 @@
   }());
 
   // Form Handler
-  $('input[type="submit"]').click(function(e){
-    e.preventDefault();
+//  $('input[type="submit"]').click(function(e){
+//    e.preventDefault();
     // Vars passed into data for ajax call
-    var $sender = $('input[name="your-name"]').val();
-    var $email = $('input[name="your-email"]').val();
-    var $message = $('textarea[name="your-reason"]').val();
-    var $form = $('.l-join-form');
+//    var $sender = $('input[name="your-name"]').val();
+//    var $email = $('input[name="your-email"]').val();
+//    var $message = $('textarea[name="your-reason"]').val();
+//    var $form = $('.l-join-form');
 
-    $.ajax({
-      url: '//formspree.io/admin@solvetherefugeecrisis.com',
-      method: 'POST',
-      data: {
-        sender: $sender,
-        email: $email,
-        message: $message
-      },
-      dataType: 'json',
-      success: function() {
-        $form.fadeOut();
-        var $joinContent = $('.l-join-content');
-        $joinContent.html('<h2>Request Submitted.</h2>');
-        $joinContent.find('h2').addClass('success');
-        $joinContent.append('<p>A team member will email you within 48 hours to schedule an interview.</p>');
-      },
-      error: function(data) {
-        $form.append('<p class="error">sorry! we\'ve had a server error. please email <a href="mailto:admin@solvetherefugeecrisis.com">admin@solvetherefugeecrisis.com</a>.</p>');
-        console.log(data);
-      }
-    });
-  });
+//    $.ajax({
+//      url: '//formspree.io/admin@solvetherefugeecrisis.com',
+//      method: 'POST',
+//      data: {
+//        sender: $sender,
+//        email: $email,
+//        message: $message
+//      },
+//      dataType: 'json',
+//      success: function() {
+//        $form.fadeOut();
+//        var $joinContent = $('.l-join-content');
+//        $joinContent.html('<h2>Request Submitted.</h2>');
+//        $joinContent.find('h2').addClass('success');
+//        $joinContent.append('<p>A team member will email you within 48 hours to schedule an interview.</p>');
+//      },
+//      error: function(data) {
+//        $form.append('<p class="error">sorry! we\'ve had a server error. please email <a href="mailto:admin@solvetherefugeecrisis.com">admin@solvetherefugeecrisis.com</a>.</p>');
+//        console.log(data);
+//      }
+//    });
+//  });
 }(jQuery));
